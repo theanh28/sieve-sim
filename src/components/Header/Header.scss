@@ -1,0 +1,25 @@
+.header-ctn {
+  --icon-size: 50px;
+
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  background: var(--background-dark);
+  width: 100%;
+
+  .header-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--width-offset);
+    &.header-text {
+      min-width: 500px;
+      color: var(--text-light);
+      margin: auto;
+    }
+  }
+  .header-icon {
+    height: var(--icon-size);
+  }
+}

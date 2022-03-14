@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  --background-dark: #160224;
+  --background-light: #e6d5f2;
+
+  --text-light: #e4f7f4;
+
+  --width-offset: 150px;
+
+  .text-large {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+}
