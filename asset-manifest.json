@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/theanh28/sieve-sim/static/css/main.bd682bca.css",
+    "main.js": "/theanh28/sieve-sim/static/js/main.bd7a646b.js",
+    "static/media/icon.svg": "/theanh28/sieve-sim/static/media/icon.cbc4210d4643859b75665ba775238483.svg",
+    "index.html": "/theanh28/sieve-sim/index.html",
+    "main.bd682bca.css.map": "/theanh28/sieve-sim/static/css/main.bd682bca.css.map",
+    "main.bd7a646b.js.map": "/theanh28/sieve-sim/static/js/main.bd7a646b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd682bca.css",
+    "static/js/main.bd7a646b.js"
+  ]
+}
