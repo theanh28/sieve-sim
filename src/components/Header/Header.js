@@ -1,6 +1,6 @@
 import React from "react";
 
-import {ReactComponent as WifiIcon} from "./icon.svg";
+import {ReactComponent as WifiIcon} from "./wifi.svg";
 
 import "./Header.scss";
 

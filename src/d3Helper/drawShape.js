@@ -9,9 +9,12 @@ const addSq = (props) => {
     width: 20,
     stroke: "black",
     fill: "#d3d3d3",
+    id: 1,
   };
   const ctx = { ...defaultCtx, ...props };
-  ctx.svg
+  const anchor = ctx.svg.append("g").attr("x", ctx.x).attr("y", ctx.y);
+
+  anchor
     .append("rect")
     .attr("x", ctx.x)
     .attr("y", ctx.y)
@@ -19,12 +22,18 @@ const addSq = (props) => {
     .attr("height", ctx.height)
     .attr("stroke", ctx.stroke)
     .attr("fill", ctx.fill)
-    .on("mouseover", function(d) {
+    .on("mouseover", function (d) {
       d3.select(this).style("stroke", SQ_COLOR.HOVER);
     })
-    .on("mouseout", function(d) {
+    .on("mouseout", function (d) {
       d3.select(this).style("stroke", SQ_COLOR.DEAD);
     });
+
+  anchor
+    .append("text")
+    .attr("x", ctx.x + 10 - 4 * (ctx.id.toString().length - 1))
+    .attr("y", ctx.y + 20)
+    .text(ctx.id);
 };
 
 const changeColor = (props) => {
@@ -32,7 +41,7 @@ const changeColor = (props) => {
   const ctx = { ...defaultCtx, ...props };
 
   const group = document.querySelector("#squares-board");
-  const node = group.getElementsByTagName('rect')[ctx.idx];
+  const node = group.getElementsByTagName("rect")[ctx.idx];
 
   d3.select(node).attr("fill", ctx.color);
 };
@@ -41,8 +50,8 @@ const addBoard = (props) => {
   const defaultCtx = {
     rows: 10,
     cols: 20,
-    height: 20,
-    width: 20,
+    height: 30,
+    width: 30,
     x_offset: 5,
     y_offset: 5,
   };
@@ -54,6 +63,7 @@ const addBoard = (props) => {
         ...ctx,
         x: ctx.x_offset * (j + 1) + ctx.width * j,
         y: ctx.y_offset * (i + 1) + ctx.height * i,
+        id: i * ctx.cols + j + 1,
       });
     }
   }

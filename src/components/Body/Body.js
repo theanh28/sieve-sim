@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { AwesomeButton } from "react-awesome-button";
 
 import Board from "../Board";
@@ -9,12 +9,12 @@ const Body = () => {
   const [start, setStart] = useState();
   const [resetting, setResetting] = useState();
 
-  const handleSimulationEnd = () => {
+  const handleSimulationEnd = useCallback(() => {
     setStart(null);
-  };
-  const handleResettingEnd = () => {
+  }, [setStart])
+  const handleResettingEnd = useCallback(() => {
     setResetting(null);
-  }
+  }, [setResetting]);
 
   return (
     <div className="body-ctn">

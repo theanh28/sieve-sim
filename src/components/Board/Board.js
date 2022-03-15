@@ -62,12 +62,14 @@ function Board({ simulating, onSimulationEnd, resetting, onResettingEnd }) {
     const svg = d3
       .select(bRef.current)
       .append("svg")
-      .attr("width", 510)
-      .attr("height", 350)
+      .attr("width", 705)
+      .attr("height", 380)
       .append("g")
       .attr("id", "squares-board");
 
     addBoard({ svg, cols: 20, rows: 10 });
+
+    // svg.append("text")
 
     setSvg(svg);
 
