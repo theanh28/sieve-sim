@@ -76,14 +76,13 @@ function Board({ simulating, onSimulationEnd, resetting, onResettingEnd }) {
 
   useEffect(() => {
     if (simulating) {
-      console.log("qwe running");
+      resetBoard(simConfig);
       colorizeSq(svg, simConfig).then(onSimulationEnd);
     }
   }, [simulating]);
 
   useEffect(() => {
     if (resetting) {
-      console.log("qwe resetting");
       resetBoard(simConfig);
       onResettingEnd();
     }
