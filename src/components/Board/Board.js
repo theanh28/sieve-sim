@@ -12,7 +12,7 @@ const colorizeLi = ({ svg, list }) => {
     changeColor({
       svg,
       idx: list[cur] - 1,
-      color: cur === 0 ? SQ_COLOR.SPECIAL : SQ_COLOR.NORMAL,
+      color: (cur === 0 && list[cur] !== 1) ? SQ_COLOR.SPECIAL : SQ_COLOR.NORMAL,
     });
     if (++cur === list.length) clearInterval(timer);
   }, 100);
@@ -68,8 +68,6 @@ function Board({ simulating, onSimulationEnd, resetting, onResettingEnd }) {
       .attr("id", "squares-board");
 
     addBoard({ svg, cols: 20, rows: 10 });
-
-    // svg.append("text")
 
     setSvg(svg);
 

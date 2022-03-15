@@ -15,6 +15,12 @@ const addSq = (props) => {
   const anchor = ctx.svg.append("g").attr("x", ctx.x).attr("y", ctx.y);
 
   anchor
+    .append("text")
+    .attr("x", ctx.x + 10 - 4 * (ctx.id.toString().length - 1))
+    .attr("y", ctx.y + 20)
+    .text(ctx.id);
+
+  anchor
     .append("rect")
     .attr("x", ctx.x)
     .attr("y", ctx.y)
@@ -22,18 +28,13 @@ const addSq = (props) => {
     .attr("height", ctx.height)
     .attr("stroke", ctx.stroke)
     .attr("fill", ctx.fill)
+    .style("opacity", 0.75)
     .on("mouseover", function (d) {
       d3.select(this).style("stroke", SQ_COLOR.HOVER);
     })
     .on("mouseout", function (d) {
       d3.select(this).style("stroke", SQ_COLOR.DEAD);
     });
-
-  anchor
-    .append("text")
-    .attr("x", ctx.x + 10 - 4 * (ctx.id.toString().length - 1))
-    .attr("y", ctx.y + 20)
-    .text(ctx.id);
 };
 
 const changeColor = (props) => {
