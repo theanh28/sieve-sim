@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sieve-sim/static/css/main.bd682bca.css",
-    "main.js": "/sieve-sim/static/js/main.cfa3c0ac.js",
+    "main.js": "/sieve-sim/static/js/main.e318b832.js",
     "static/media/wifi.svg": "/sieve-sim/static/media/wifi.cbc4210d4643859b75665ba775238483.svg",
     "index.html": "/sieve-sim/index.html",
     "main.bd682bca.css.map": "/sieve-sim/static/css/main.bd682bca.css.map",
-    "main.cfa3c0ac.js.map": "/sieve-sim/static/js/main.cfa3c0ac.js.map"
+    "main.e318b832.js.map": "/sieve-sim/static/js/main.e318b832.js.map"
   },
   "entrypoints": [
     "static/css/main.bd682bca.css",
-    "static/js/main.cfa3c0ac.js"
+    "static/js/main.e318b832.js"
   ]
 }
